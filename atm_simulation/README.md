@@ -1,40 +1,27 @@
-# ATM Simulation Program (C)
-
-
-
-A console-based ATM simulation written in **C**, designed to demonstrate core programming constructs such as **decision-making**, **control flow**, and **user input handling** through a real-world banking scenario.
-
-
-
-
-
-
+# ATM Simulation System (C)
+A console-based ATM simulation program written in **C**, implementing secure banking operations using structured decision-making and controlled user input.
 
 ## Overview
 
+This project simulates essential ATM functionalities such as balance inquiry, deposit, and withdrawal. Each sensitive operation is protected by **PIN verification with a limited number of attempts**, ensuring basic security logic.
 
-
-This program simulates basic ATM operations, including balance inquiry, cash deposit, and cash withdrawal with PIN verification. It is implemented as a menu-driven application using structured control logic.
-
-
-
----
-
-
+The program is designed as a **menu-driven application** using `switch-case` and conditional control flow.
 
 ## Features
 
 
 
-- Balance inquiry
+- Balance inquiry with PIN authentication
 
-- Secure deposit operation using PIN authentication
+- Secure cash deposit with PIN validation
 
-- Secure withdrawal operation with balance validation
+- Secure cash withdrawal with balance verification
 
-- Menu-driven interface using `switch-case`
+- Limited PIN attempts (maximum 3 tries per operation)
 
-- Clear transaction feedback to the user
+- Clear transaction status messages
+
+- Controlled program termination
 
 
 
@@ -42,37 +29,29 @@ This program simulates basic ATM operations, including balance inquiry, cash dep
 
 
 
-## Technical Highlights
+## Technical Details
 
 
 
-- Language: **C**
+- **Language:** C
 
-- Control Structures:
+- **Programming Paradigm:** Procedural
+
+- **Input/Output:** `scanf`, `printf`
+
+- **Control Flow:**
 
   - `switch-case`
 
   - `if-else`
 
-- Input/Output:
+  - `while` loops
 
-  - `scanf`
-
-  - `printf`
-
-- Program Flow Control:
-
-  - Conditional branching
-
-  - Label-based termination (`goto`) for controlled exit
+  - Label-based exit using `goto`
 
 
 
-> **Note:** `goto` is used intentionally for educational purposes to demonstrate label-based flow control. In production systems, loop-based constructs are preferred.
-
-
-
----
+> **Note:** The use of `goto` is intentional for educational purposes to demonstrate explicit control transfer. In production systems, loop-based exits are generally preferred.
 
 
 
@@ -88,53 +67,83 @@ This program simulates basic ATM operations, including balance inquiry, cash dep
 
 | ATM PIN          | 5845    |
 
+| Max PIN Attempts | 3       |
+
 
 
 ---
 
 
 
-## How to Build and Run
+## Program Flow
 
-Sample Menu
 
-1. Check Balance
 
-2. Deposit Amount
+1. User selects an operation from the menu
 
-3. Withdraw Amount
+2. PIN verification is required for sensitive actions
 
-4. Exit
+3. User is allowed up to three attempts to enter the correct PIN
 
-Limitations
+4. Transaction is processed upon successful authentication
 
-Single transaction per execution
+5. Program exits gracefully with a confirmation message
 
-No retry limit for incorrect PIN
+
+
+---
+
+
+
+## Menu Options
+
+
+
+Check Balance
+
+Deposit Amount
+
+Withdraw Amount
+
+Exit
+
+
+
+---
+
+
+
+## Build and Run Instructions
+
+**Limitations**
+
+Single operation per execution
 
 No persistent data storage
 
-No loop-based session handling
+No transaction history
 
-Future Enhancements
+No continuous session loop
 
-Continuous session using loops
+**Potential Enhancements**
 
-PIN retry limits and lockout mechanism
+Continuous menu loop for multiple transactions
 
-Modular design using functions
+Modularization using functions
+
+Removal of goto in favor of structured exits
+
+PIN lockout and cooldown mechanism
 
 File-based balance persistence
 
-Improved input validation
+Intended Use
 
-Purpose
+This project is suitable for:
 
-This project is intended for:
+Academic assignments and laboratory exercises
 
-Practicing decision conditions and control flow in C
+Practicing control structures in C
 
-Academic assignments and lab exercises
-
-Understanding real-world logic mapping in procedural programming
+Understanding real-world procedural logic implementation
 

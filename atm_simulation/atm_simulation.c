@@ -5,6 +5,7 @@ int main() {
   int amount;
   int pin=5845;
   int userpin;
+  int i=1;
   printf("1.check balance\n");
   printf("2.deposit amount\n");
   printf("3.withdraw amount\n");
@@ -14,34 +15,69 @@ int main() {
   
   
   switch(choice){
-    case 1:printf("available balance: %d\n",balance);
+    case 1:
+    
+    while (i <= 3) {
+        printf("Enter correct pin:\n");
+        scanf("%d", &userpin);
+
+        if (pin == userpin) {
+            printf("available balance: %d\n",balance);
             goto thankyoupage;
-    case 2: printf("enter correct pin\n");
-            scanf("%d",&userpin);
-                if(pin==userpin){
-                    printf("amount deposit\n");
-                    scanf("%d",&amount);
-                    balance+=amount;
-                    printf("current balance: %d\n",balance);
-                }
-                 goto thankyoupage;
-                break;
-                
-    case 3:
-    printf("withdram amount :");
-    scanf("%d",&amount);
-    printf("enter correct pin\n");
-            scanf("%d",&userpin);
-                if(pin==userpin){
-                   if(amount<=balance){
-                    balance-=amount;
-                    printf("current balance: %d\n",balance);
-                   }
-                   else
-                   printf("Insufficient Balance\n");
-                }
-                 goto thankyoupage;
-                break;
+        } else {
+            printf("Incorrect PIN\n");
+            i++;
+        }
+    }
+
+    printf("Too many incorrect attempts. Try again later.\n");
+    goto thankyoupage;
+    case 2:
+    while (i <= 3) {
+        printf("Enter correct pin:\n");
+        scanf("%d", &userpin);
+
+        if (pin == userpin) {
+            printf("Enter amount to deposit:\n");
+            scanf("%d", &amount);
+            balance += amount;
+            printf("Current balance: %d\n", balance);
+            goto thankyoupage;
+        } else {
+            printf("Incorrect PIN\n");
+            i++;
+        }
+    }
+
+    printf("Too many incorrect attempts. Try again later.\n");
+    goto thankyoupage;
+   
+   case 3:
+    i = 1;
+    while (i <= 3) {
+        printf("Enter correct pin:\n");
+        scanf("%d", &userpin);
+
+        if (pin == userpin) {
+            printf("Withdraw amount:\n");
+            scanf("%d", &amount);
+
+            if (amount <= balance) {
+                balance -= amount;
+                printf("Current balance: %d\n", balance);
+            } else {
+                printf("Insufficient balance\n");
+            }
+            goto thankyoupage;
+        } else {
+            printf("Incorrect PIN\n");
+            i++;
+        }
+    }
+
+    printf("Too many incorrect attempts. Try again later.\n");
+    goto thankyoupage;
+break;
     case 4:
     goto thankyoupage;
     

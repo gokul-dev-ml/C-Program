@@ -28,7 +28,7 @@ int calculatetotal(int m1,int m2,int m3){
 }
 
 float calculatepercentage(int total){
-    float average=(float)(total/100)*3;
+    float average=(total/300.0)*100;
     return average;
 }
 
@@ -52,4 +52,3 @@ void display(int total,float percentage,char grade,int m1,int m2,int m3){
       printf("grade: %c\n",grade);
     
 }
-

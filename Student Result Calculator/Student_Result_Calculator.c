@@ -28,7 +28,7 @@ int calculatetotal(int m1,int m2,int m3){
 }
 
 float calculatepercentage(int total){
-    float average=(float)total/3.0;
+    float average=(float)(total/100)*3;
     return average;
 }
 

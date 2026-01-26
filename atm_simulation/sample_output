@@ -1,0 +1,65 @@
+1)Check Balance:
+
+1.check balance
+2.deposit amount
+3.withdraw amount
+4.exit
+please confirm the action you want:
+1
+Enter correct pin:
+5845
+available balance: 20000
+Thanks For Using Our ATM
+---
+
+2)Deposit:
+
+1.check balance
+2.deposit amount
+3.withdraw amount
+4.exit
+please confirm the action you want:
+2
+Enter correct pin:
+4554
+Incorrect PIN
+Enter correct pin:
+4556
+Incorrect PIN
+Enter correct pin:
+5845
+Enter amount to deposit:
+60000
+Current balance: 80000
+Thanks For Using Our ATM
+----
+
+3)Withdraw:
+
+1.check balance
+2.deposit amount
+3.withdraw amount
+4.exit
+please confirm the action you want:
+3
+Enter correct pin:
+2254
+Incorrect PIN
+Enter correct pin:
+5845
+Withdraw amount:
+1500
+Current balance: 18500
+Thanks For Using Our ATM
+-----
+4)Exit:
+
+1.check balance
+2.deposit amount
+3.withdraw amount
+4.exit
+please confirm the action you want:
+4
+Thanks For Using Our ATM
+-----
+

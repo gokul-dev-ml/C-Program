@@ -1,0 +1,32 @@
+enter student name: Gokul
+enter student mark 1: 65
+enter student mark 2: 54
+enter student mark 3: 58
+
+enter student name: Arun
+enter student mark 1: 72
+enter student mark 2: 68
+enter student mark 3: 75
+
+enter student name: Priya
+enter student mark 1: 80
+enter student mark 2: 85
+enter student mark 3: 90
+
+student :Gokul
+mark:65
+mark:54
+mark:58
+avrage :59.00
+
+student :Arun
+mark:72
+mark:68
+mark:75
+avrage :71.67
+
+student :Priya
+mark:80
+mark:85
+mark:90
+avrage :85.00
